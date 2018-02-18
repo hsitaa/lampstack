@@ -1,0 +1,19 @@
+---
+
+- hosts: all
+  remote_user: root
+  gather_facts: yes
+  roles:
+
+    - {role: web/nginx,
+       tags: nginxs
+      }
+    - {role: web/apache,
+       tags: apaches
+      }
+    - {role: web/php,
+       tags: phps
+      }
+    - {role: db/mysql,
+       tags: mysql
+      }
